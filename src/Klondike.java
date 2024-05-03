@@ -25,33 +25,51 @@ class Klondike {
         boolean estaJugando = true;
         do {
             Menu menu = new Menu();
-            mostrarTapete();
             menu.mostrar();
+            mostrarTapete();
             int opcion = menu.getOpcion();
             switch (opcion) {
                 case 1:
+                    baraja.moverA(descarte);
                     break;
                 case 2:
+                    descarte.moverA(this.escogerPalo("A"));
                     break;
                 case 3:
+                    descarte.moverA(this.escogerColumna("A"));
                     break;
                 case 4:
+                    this.escogerPalo("De").moverA(this.escogerColumna("A"));
                     break;
                 case 5:
+                    this.escogerColumna("De").moverA(this.escogerPalo("A"));
                     break;
                 case 6:
+                    this.escogerColumna("De").moverA(this.escogerColumna("A"));
                     break;
                 case 7:
+                    this.escogerColumna("De").voltear();
                     break;
                 case 8:
+                    descarte.voltear(baraja);
                     break;
                 case 9: 
                     estaJugando = !estaJugando;
                     break;
             }    
         } while(estaJugando);
+    }
 
-
+    private Palo escogerPalo(String prefijo){
+        System.out.println(prefijo + " que palo? (1-4)");
+        int palo = new Scanner(System.in).nextInt();
+        return palos[palo-1];
+    }
+    
+    private Columna escogerColumna(String prefijo){
+        System.out.println(prefijo + " que columna? (1-7)");
+        int columna = new Scanner(System.in).nextInt();
+        return columnas[columna-1];        
     }
 
     private void mostrarTapete() {

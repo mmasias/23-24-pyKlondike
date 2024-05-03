@@ -10,4 +10,19 @@ public class Columna {
         throw new UnsupportedOperationException("Unimplemented method 'mostrar'");
     }
 
+    public void moverA(Palo escogerPalo) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'moverA'");
+    }
+
+    public void moverA(Columna escogerColumna) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'moverA'");
+    }
+
+    public void voltear() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'voltear'");
+    }
+
 }
