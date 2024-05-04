@@ -24,7 +24,6 @@ class Klondike {
     }
 
     public void jugar() {
-
         boolean estaJugando = true;
         do {
             Menu menu = new Menu();
