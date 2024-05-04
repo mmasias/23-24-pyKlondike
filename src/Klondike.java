@@ -7,16 +7,19 @@ class Klondike {
     private Descarte descarte;
     private Columna[] columnas;
 
+    private final int NUM_PALOS = 4;
+    private final int NUM_COLUMNAS = 7;
+
     public Klondike() {
         baraja = new Baraja();
         descarte = new Descarte();
-        palos = new Palo[4];
-        for (int i = 0; i < 4; i++) {
-            palos[i] = new Palo();
+        palos = new Palo[NUM_PALOS];
+        for (int palo = 0; palo < NUM_PALOS; palo++) {
+            palos[palo] = new Palo();
         }
-        columnas = new Columna[7];
-        for (int i = 0; i < 7; i++) {
-            columnas[i] = new Columna(baraja, i + 1);
+        columnas = new Columna[NUM_COLUMNAS];
+        for (int columna = 0; columna < NUM_COLUMNAS; columna++) {
+            columnas[columna] = new Columna(baraja, columna + 1);
         }
     }
 
@@ -53,38 +56,37 @@ class Klondike {
                 case 8:
                     descarte.voltear(baraja);
                     break;
-                case 9: 
+                case 9:
                     estaJugando = !estaJugando;
                     break;
-            }    
-        } while(estaJugando);
+            }
+        } while (estaJugando);
     }
 
-    private Palo escogerPalo(String prefijo){
+    private Palo escogerPalo(String prefijo) {
         System.out.println(prefijo + " que palo? (1-4)");
         int palo = new Scanner(System.in).nextInt();
-        return palos[palo-1];
+        return palos[palo - 1];
     }
-    
-    private Columna escogerColumna(String prefijo){
+
+    private Columna escogerColumna(String prefijo) {
         System.out.println(prefijo + " que columna? (1-7)");
         int columna = new Scanner(System.in).nextInt();
-        return columnas[columna-1];        
+        return columnas[columna - 1];
     }
 
     private void mostrarTapete() {
         baraja.mostrar();
         descarte.mostrar();
-        for (int i = 0; i < 4; i++) {
-            palos[i].mostrar();
+        for (int palo = 0; palo < 4; palo++) {
+            palos[palo].mostrar();
         }
-        for (int i = 0; i < 7; i++) {
-            columnas[i].mostrar();
+        for (int columna = 0; columna < 7; columna++) {
+            columnas[columna].mostrar();
         }
     }
 
     public static void main(String[] args) {
         new Klondike().jugar();
     }
-
 }
