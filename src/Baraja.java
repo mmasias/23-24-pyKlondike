@@ -66,7 +66,12 @@ public class Baraja {
         return cartas[ultima];
     }
 
-    private boolean vacia() {
+    public boolean vacia() {
         return ultima == 0;
+    }
+
+    public void ponerCarta(Carta carta) {
+        cartas[ultima] = carta;
+        ultima++;
     }
 }

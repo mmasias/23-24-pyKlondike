@@ -13,4 +13,19 @@ public class Carta {
 
     }
 
+    public boolean esAs() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'esAs'");
+    }
+
+    public boolean igualPalo(Carta cima) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'igualPalo'");
+    }
+
+    public boolean siguiente(Carta cima) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'siguiente'");
+    }
+
 }
