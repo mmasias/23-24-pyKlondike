@@ -50,14 +50,33 @@ public class Columna {
 
     public void moverA(Columna columna) {
         if (this.vacia()) {
-            System.out.println("no se puede!");
+            System.out.println("No se puede mover. Columna vacía.");
+            return;
         } else {
-            Carta carta = this.sacar();
-            if (columna.apilable(carta)) {
-                columna.poner(carta);
-            } else {
-                this.poner(carta);
-                System.out.println("No se puede!");
+            int primeraBocaArriba = 0;
+            while (primeraBocaArriba < ultima && !cartas[primeraBocaArriba].bocaArriba()) {
+                primeraBocaArriba++;
+            }
+
+            if (primeraBocaArriba == ultima) {
+                System.out.println("No hay cartas boca arriba para mover.");
+
+            } else {                
+                Carta[] cartasVisibles = new Carta[ultima - primeraBocaArriba];
+                int j = 0;
+                while (primeraBocaArriba < ultima) {
+                    cartasVisibles[j] = cartas[primeraBocaArriba];
+                    primeraBocaArriba++;
+                    j++;
+                }
+                if (columna.apilable(cartasVisibles[0])) {
+                    for (Carta carta : cartasVisibles) {
+                        columna.poner(carta);
+                    }
+                    ultima -= cartasVisibles.length;
+                } else {
+                    System.out.println("No se puede mover el conjunto de cartas a la columna destino.");
+                }
             }
         }
     }

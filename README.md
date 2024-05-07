@@ -1,8 +1,8 @@
 # Nuestro intento de Klondike
 
-## ¡Versión beta!
+## ¡Versión beta 002!
 
-Desarrollada en vivo en clase: **puede contener errores**. Por favor, indicarlos en los issues para ir corrigiéndolos. Si alguien detecta y corrige un error, hacer un **PR**
+Se actualiza el método `moverA()` de la clase `Columna` para que tenga en cuenta que se pueden mover múltiples cartas a la vez en una misma jugada. Nótese como la cabecera del método no cambia (no tendría por qué hacerlo, la idea es la misma, mover de una columna a otra) por tanto no cambia la relación de la clase con el resto de colaboradores, pero se mejora la lógica.
 
 ```
 OPCIONES>
@@ -16,18 +16,47 @@ OPCIONES>
 8. Voltear Descarte en Baraja
 9. Salir
 BARAJA: [? ?]
-Descarte: [Q ♦️][7 ♦️][9 ♣️]
-Palo: [A ♥️]
-Palo: [A ♦️]
+Descarte: [3 ♠️][A ♦️][9 ♦️]
+Palo: [A ♣️]
 Palo: No hay cartas en el palo
 Palo: No hay cartas en el palo
-Columna [1]: [3 ♠️]
-Columna [2]: [K ♥️]
-Columna [3]: [? ?][? ?][7 ♠️]
-Columna [4]: [? ?][? ?][? ?]
-Columna [5]: [? ?][? ?][? ?][? ?][X ♥️]
-Columna [6]: [? ?][? ?][? ?][? ?][? ?][6 ♥️]
-Columna [7]: [? ?][? ?][? ?][? ?][? ?][? ?][9 ♥️]
+Palo: No hay cartas en el palo
+Columna [1]: [8 ♠️][7 ♦️]
+Columna [2]: [? ?][9 ♣️][8 ♥️]
+Columna [3]: [? ?][? ?][Q ♥️][J ♣️][X ♦️]
+Columna [4]: [? ?][? ?][5 ♥️]
+Columna [5]: [? ?][? ?][? ?][5 ♠️]
+Columna [6]: [? ?][? ?][? ?][5 ♦️]
+Columna [7]: [? ?][? ?][? ?][? ?][? ?][? ?][2 ♠️]
+Elige una opción  [1-9]
+6
+¿De qué columna? [1-7]
+2
+¿A qué columna? [1-7]
+3
+OPCIONES>
+1. Mover de Baraja a Descarte
+2. Mover de Descarte a Palo
+3. Mover de Descarte a Columna
+4. Mover de Palo a Columna
+5. Mover de Columna a Palo
+6. Mover de Columna a Columna
+7. Voltear carta de Columna
+8. Voltear Descarte en Baraja
+9. Salir
+BARAJA: [? ?]
+Descarte: [3 ♠️][A ♦️][9 ♦️]
+Palo: [A ♣️]
+Palo: No hay cartas en el palo
+Palo: No hay cartas en el palo
+Palo: No hay cartas en el palo
+Columna [1]: [8 ♠️][7 ♦️]
+Columna [2]: [? ?]
+Columna [3]: [? ?][? ?][Q ♥️][J ♣️][X ♦️][9 ♣️][8 ♥️]
+Columna [4]: [? ?][? ?][5 ♥️]
+Columna [5]: [? ?][? ?][? ?][5 ♠️]
+Columna [6]: [? ?][? ?][? ?][5 ♦️]
+Columna [7]: [? ?][? ?][? ?][? ?][? ?][? ?][2 ♠️]
 Elige una opción  [1-9]
 ```
 

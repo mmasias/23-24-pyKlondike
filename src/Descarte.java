@@ -67,7 +67,7 @@ public class Descarte {
             while (!this.vacia()) {
                 Carta carta = this.sacar();
                 carta.voltear();
-                baraja.ponerCarta(carta);
+                baraja.poner(carta);
             }
         }
     }
