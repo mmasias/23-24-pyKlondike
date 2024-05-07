@@ -24,7 +24,7 @@ public class Carta {
             numero = NUMEROS[this.numero];
             palo = PALOS[this.palo];
         }
-        System.out.print ("[" + numero + " " + palo + " ]");
+        System.out.print ("[" + numero + " " + palo + "]");
     }
 
     public void voltear() {
@@ -61,5 +61,9 @@ public class Carta {
 
     private boolean rojo() {
         return ROJOS.incluye(this.palo);
+    }
+
+    public int getNumero(){
+        return this.numero;
     }
 }
