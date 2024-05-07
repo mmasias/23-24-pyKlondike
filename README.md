@@ -7,6 +7,9 @@ De momento tenemos:
 - **Klondike**
   - [x] Constructor()
   - [x] void jugar()
+- **Menu**
+  - [x] void mostrar()
+  - [x] int getOpcion()
 - **Baraja**
   - [x] Constructor
   - [x] void mostrar()
@@ -31,3 +34,7 @@ De momento tenemos:
   - [ ] Constructor(int palo, int numero)
   - [ ] void mostrar()
   - [ ] void voltear()
+
+## Clases de apoyo
+
+- **Intervalo**
