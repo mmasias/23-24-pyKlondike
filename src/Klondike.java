@@ -91,6 +91,7 @@ class Klondike {
         baraja.mostrar();
         descarte.mostrar();
         for (int palo = 0; palo < 4; palo++) {
+            System.out.print((palo + 1) + "º ");
             palos[palo].mostrar();
         }
         for (int columna = 0; columna < 7; columna++) {
