@@ -61,41 +61,30 @@ class Klondike {
             }
         } while (estaJugando);
     }
-
+    
     private Palo escogerPalo(String prefijo) {
-        System.out.println("¿" + prefijo + " qué palo? (1-4)");
-
-        Intervalo intervaloPalo = new Intervalo(1, NUM_PALOS);
-        int palo;
-        boolean error;
-        do {
-            System.out.println("Elige un palo [1-4]");
-            palo = new Scanner(System.in).nextInt();
-            error = !intervaloPalo.incluye(palo);
-            if (error) {
-                System.out.println("Selección inválida. Intenta de nuevo.");
-            }
-        } while (error);
-
-        return palos[palo - 1];
+        int indicePalo = escogerOpcion(prefijo, NUM_PALOS, "qué palo?");
+        return palos[indicePalo - 1];
+    }
+    
+    private Columna escogerColumna(String prefijo) {
+        int indiceColumna = escogerOpcion(prefijo, NUM_COLUMNAS, "qué columna?");
+        return columnas[indiceColumna - 1];
     }
 
-    private Columna escogerColumna(String prefijo) {
-        System.out.println("¿" + prefijo + " qué columna? (1-7)");
-
-        Intervalo intervaloColumna = new Intervalo(1, NUM_COLUMNAS);
-        int columna;
+    private int escogerOpcion(String prefijo, int max, String mensaje) {
+        Intervalo intervalo = new Intervalo(1, max);
+        int opcion;
         boolean error;
         do {
-            System.out.println("Elige una columna [1-7]");
-            columna = new Scanner(System.in).nextInt();
-            error = !intervaloColumna.incluye(columna);
+            System.out.println("¿" + prefijo + " " + mensaje + " [1-" + max + "]");
+            opcion = new Scanner(System.in).nextInt();
+            error = !intervalo.incluye(opcion);
             if (error) {
                 System.out.println("Selección inválida. Intenta de nuevo.");
             }
         } while (error);
-
-        return columnas[columna - 1];
+        return opcion;
     }
 
     private void mostrarTapete() {
