@@ -39,9 +39,13 @@ public class Baraja {
 
     public void mostrar() {
         System.out.print("BARAJA: ");
-        Carta carta = this.cima();
-        carta.mostrar();
-        System.out.println();
+        if (this.vacia()) {
+            System.out.println("No hay cartas en la baraja");
+        } else {
+            Carta carta = this.cima();
+            carta.mostrar();
+            System.out.println();
+        }
     }
 
     private Carta cima() {
