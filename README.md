@@ -17,10 +17,10 @@ OPCIONES>
 9. Salir
 BARAJA: [? ?]
 Descarte: [Q ♦️][7 ♦️][9 ♣️]
-Palo: [A ♥️]
-Palo: [A ♦️]
-Palo: No hay cartas en el palo
-Palo: No hay cartas en el palo
+1º Palo: [A ♥️]
+2º Palo: [A ♦️]
+3º Palo: No hay cartas en el palo
+4º Palo: No hay cartas en el palo
 Columna [1]: [3 ♠️]
 Columna [2]: [K ♥️]
 Columna [3]: [? ?][? ?][7 ♠️]
