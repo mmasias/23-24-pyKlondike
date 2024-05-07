@@ -75,8 +75,4 @@ public class Baraja {
         return ultima == 0;
     }
 
-    public void ponerCarta(Carta carta) {
-        cartas[ultima] = carta;
-        ultima++;
-    }
 }

@@ -63,14 +63,38 @@ class Klondike {
     }
 
     private Palo escogerPalo(String prefijo) {
-        System.out.println(prefijo + " que palo? (1-4)");
-        int palo = new Scanner(System.in).nextInt();
+        System.out.println("¿" + prefijo + " qué palo? (1-4)");
+
+        Intervalo intervaloPalo = new Intervalo(1, NUM_PALOS);
+        int palo;
+        boolean error;
+        do {
+            System.out.println("Elige un palo [1-4]");
+            palo = new Scanner(System.in).nextInt();
+            error = !intervaloPalo.incluye(palo);
+            if (error) {
+                System.out.println("Selección inválida. Intenta de nuevo.");
+            }
+        } while (error);
+
         return palos[palo - 1];
     }
 
     private Columna escogerColumna(String prefijo) {
-        System.out.println(prefijo + " que columna? (1-7)");
-        int columna = new Scanner(System.in).nextInt();
+        System.out.println("¿" + prefijo + " qué columna? (1-7)");
+
+        Intervalo intervaloColumna = new Intervalo(1, NUM_COLUMNAS);
+        int columna;
+        boolean error;
+        do {
+            System.out.println("Elige una columna [1-7]");
+            columna = new Scanner(System.in).nextInt();
+            error = !intervaloColumna.incluye(columna);
+            if (error) {
+                System.out.println("Selección inválida. Intenta de nuevo.");
+            }
+        } while (error);
+
         return columnas[columna - 1];
     }
 

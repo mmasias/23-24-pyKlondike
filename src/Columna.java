@@ -21,7 +21,7 @@ public class Columna {
     public void mostrar() {
         System.out.print("Columna [" + this.posicion + "]: ");
         if (this.vacia()) {
-            System.out.println("NADA");
+            System.out.print("NADA");
         } else {
             for (int i = 0; i < ultima; i++) {
                 cartas[i].mostrar();
