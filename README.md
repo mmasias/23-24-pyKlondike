@@ -1,40 +1,47 @@
-# Nuestro intento de Klondike
+# Borrador del 21 (Blackjack)
 
-De momento tenemos:
+```
+--------------------
+Mano: [4 ♠️][8 ♠️] - Puntaje: 12 ==> Sigue jugando
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+1
+--------------------
+Mano: [4 ♠️][8 ♠️][4 ♥️] - Puntaje: 16 ==> Sigue jugando
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+1
+--------------------
+Mano: [4 ♠️][8 ♠️][4 ♥️][A ♠️] - Puntaje: 17 ==> Sigue jugando
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+1
+--------------------
+Mano: [4 ♠️][8 ♠️][4 ♥️][A ♠️][4 ♣️] - Puntaje: 21 ==> Ganó
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+```
 
 ## Clases propuestas y sus respectivas vistas públicas
 
-- **Klondike**
-  - [x] Constructor()
+- **XXI**
+  - [x] XXI()
   - [x] void jugar()
-- **Menu**
+- **Mano**
+  - [x] Mano(Baraja baraja)
   - [x] void mostrar()
-  - [x] int getOpcion()
-- **Baraja**
-  - [x] Constructor
-  - [x] void mostrar()
-  - [x] void moverA(Descarte descarte)
-  - [x] Carta sacar()
-- **Columna**
-  - [ ] Constructor(Baraja baraja, int numeroColumna)
-  - [ ] void mostrar()
-  - [ ] void moverA(Palo palo)
-  - [ ] void moverA(Columna columna)
-  - [ ] void voltear
-- **Descarte**
-  - [ ] void mostrar()
-  - [ ] void moverA(Palo palo)
-  - [ ] void moverA(Columna columna)
-  - [ ] void poner(Carta carta)
-  - [ ] void voltear(Baraja baraja)
-- **Palo**
-  - [ ] mostrar()
-  - [ ] moverA(Columna columna)
-- **Carta**
-  - [ ] Constructor(int palo, int numero)
-  - [ ] void mostrar()
-  - [ ] void voltear()
-
-## Clases de apoyo
-
-- **Intervalo**
+  - [x] void pedir(Baraja baraja)
+  - [x] boolean haPerdido()
+  - [x] boolean xxi()

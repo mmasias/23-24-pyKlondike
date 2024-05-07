@@ -69,10 +69,6 @@ public class Mano {
         }
     }
 
-    public void cerrar() {
-        this.abierta = false;
-    }
-
     public boolean haPerdido() {
         return obtenerPuntaje() > 21;
     }

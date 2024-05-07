@@ -10,7 +10,7 @@ class XXI {
         mano = new Mano(baraja);
     }
 
-    private void jugar() {
+    public void jugar() {
         boolean estaJugando = true;
         do {
             linea();
