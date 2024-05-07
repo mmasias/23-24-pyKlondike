@@ -61,12 +61,12 @@ class Klondike {
             }
         } while (estaJugando);
     }
-    
+
     private Palo escogerPalo(String prefijo) {
         int indicePalo = escogerOpcion(prefijo, NUM_PALOS, "qué palo?");
         return palos[indicePalo - 1];
     }
-    
+
     private Columna escogerColumna(String prefijo) {
         int indiceColumna = escogerOpcion(prefijo, NUM_COLUMNAS, "qué columna?");
         return columnas[indiceColumna - 1];
@@ -91,6 +91,7 @@ class Klondike {
         baraja.mostrar();
         descarte.mostrar();
         for (int palo = 0; palo < 4; palo++) {
+            System.out.print((palo + 1) + "º ");
             palos[palo].mostrar();
         }
         for (int columna = 0; columna < 7; columna++) {
