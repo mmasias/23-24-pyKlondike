@@ -10,7 +10,7 @@ public class Descarte {
     }
 
     public void mostrar() {
-        System.out.println("Descarte: ");
+        System.out.print("Descarte: ");
         if (this.vacia()) {
             System.out.println("No hay cartas en el Descarte");
         } else {

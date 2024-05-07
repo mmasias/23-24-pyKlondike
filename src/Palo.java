@@ -10,7 +10,7 @@ public class Palo {
     }
 
     public void mostrar() {
-        System.out.println("Palo: ");
+        System.out.print("Palo: ");
         if (this.vacia()) {
             System.out.println("No hay cartas en el palo");
         } else {

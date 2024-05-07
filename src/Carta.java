@@ -5,7 +5,7 @@ public class Carta {
     private int numero;
     private boolean bocaArriba;
 
-    private final String[] PALOS = { "Espadas", "Treboles", "Diamantes", "Corazones" };
+    private final String[] PALOS = { "Picas", "Treboles", "Diamantes", "Corazones" };
     private final String[] NUMEROS = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
     private final Intervalo NEGROS = new Intervalo(0, 1);
@@ -24,7 +24,7 @@ public class Carta {
             numero = NUMEROS[this.numero];
             palo = PALOS[this.palo];
         }
-        System.out.println("[" + numero + " " + palo + " ]");
+        System.out.print ("[" + numero + " " + palo + " ]");
     }
 
     public void voltear() {

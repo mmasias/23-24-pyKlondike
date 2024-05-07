@@ -38,7 +38,7 @@ public class Baraja {
     }
 
     public void mostrar() {
-        System.out.println("BARAJA: ");
+        System.out.print("BARAJA: ");
         Carta carta = this.cima();
         carta.mostrar();
     }

@@ -19,7 +19,7 @@ public class Columna {
     }
 
     public void mostrar() {
-        System.out.println("Columna: ");
+        System.out.print("Columna: ");
         if (this.vacia()){
             System.out.println("NADA");
         } else {
@@ -27,6 +27,7 @@ public class Columna {
                 cartas[i].mostrar();
             }
         }
+        System.out.println();
     }
 
     private boolean vacia() {
