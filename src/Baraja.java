@@ -41,6 +41,7 @@ public class Baraja {
         System.out.print("BARAJA: ");
         Carta carta = this.cima();
         carta.mostrar();
+        System.out.println();
     }
 
     private Carta cima() {

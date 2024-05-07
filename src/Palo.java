@@ -16,6 +16,7 @@ public class Palo {
         } else {
             Carta carta = this.cima();
             carta.mostrar();
+            System.out.println();
         }
     }
 

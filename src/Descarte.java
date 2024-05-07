@@ -21,19 +21,20 @@ public class Descarte {
             for (int i = primeraVisible; i < ultima; i++) {
                 cartas[i].mostrar();
             }
+            System.out.println();
         }
     }
 
     private boolean vacia() {
-        return ultima==0;
+        return ultima == 0;
     }
 
     public void moverA(Palo palo) {
-        if (this.vacia()){
+        if (this.vacia()) {
             System.out.println("No hay cartas en el descarte.");
         } else {
             Carta carta = this.sacar();
-            if (palo.apilable(carta)){
+            if (palo.apilable(carta)) {
                 palo.poner(carta);
             } else {
                 System.out.println("Jugada inválida.");
@@ -47,11 +48,11 @@ public class Descarte {
     }
 
     public void moverA(Columna columna) {
-        if (this.vacia()){
+        if (this.vacia()) {
             System.out.println("No se puede mover");
         } else {
             Carta carta = this.sacar();
-            if (columna.apilable(carta)){
+            if (columna.apilable(carta)) {
                 columna.poner(carta);
             } else {
                 System.out.println("No se puede");
@@ -60,10 +61,10 @@ public class Descarte {
     }
 
     public void voltear(Baraja baraja) {
-        if (this.vacia() || !baraja.vacia()){
+        if (this.vacia() || !baraja.vacia()) {
             System.out.println("No se puede voltear!");
         } else {
-            while (!this.vacia()){
+            while (!this.vacia()) {
                 Carta carta = this.sacar();
                 carta.voltear();
                 baraja.ponerCarta(carta);
