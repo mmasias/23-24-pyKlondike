@@ -1,8 +1,10 @@
 # Borrador del 21 (Blackjack)
 
+Corregido el bug por no recrear la baraja al iniciar de nuevo. (Discutible...)
+
 ```
 --------------------
-Mano: [4 ♠️][8 ♠️] - Puntaje: 12 ==> Sigue jugando
+Mano: [9 ♥️][A ♠️] - Puntaje: 20 ==> Sigue jugando
 --------------------
 1. Pedir
 2. Empezar de nuevo
@@ -10,23 +12,7 @@ Mano: [4 ♠️][8 ♠️] - Puntaje: 12 ==> Sigue jugando
 --------------------
 1
 --------------------
-Mano: [4 ♠️][8 ♠️][4 ♥️] - Puntaje: 16 ==> Sigue jugando
---------------------
-1. Pedir
-2. Empezar de nuevo
-3. Salir
---------------------
-1
---------------------
-Mano: [4 ♠️][8 ♠️][4 ♥️][A ♠️] - Puntaje: 17 ==> Sigue jugando
---------------------
-1. Pedir
-2. Empezar de nuevo
-3. Salir
---------------------
-1
---------------------
-Mano: [4 ♠️][8 ♠️][4 ♥️][A ♠️][4 ♣️] - Puntaje: 21 ==> Ganó
+Mano: [9 ♥️][A ♠️][A ♦️] - Puntaje: 21 ==> Ganó
 --------------------
 1. Pedir
 2. Empezar de nuevo

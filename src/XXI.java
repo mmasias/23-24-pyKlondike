@@ -23,6 +23,7 @@ class XXI {
                     }
                     break;
                 case 2:
+                    baraja = new Baraja();
                     mano = new Mano(baraja);
                     break;
                 case 3:
