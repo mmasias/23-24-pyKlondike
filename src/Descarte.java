@@ -1,8 +1,5 @@
 
-public class Descarte {
-
-    private Carta[] cartas;
-    private int ultima;
+public class Descarte extends Mazo {
 
     public Descarte() {
         this.ultima = 0;
@@ -25,10 +22,6 @@ public class Descarte {
         }
     }
 
-    private boolean vacia() {
-        return ultima == 0;
-    }
-
     public void moverA(Palo palo) {
         if (this.vacia()) {
             System.out.println("No hay cartas en el descarte.");
@@ -40,11 +33,6 @@ public class Descarte {
                 System.out.println("Jugada inválida.");
             }
         }
-    }
-
-    private Carta sacar() {
-        ultima--;
-        return cartas[ultima];
     }
 
     public void moverA(Columna columna) {
@@ -70,10 +58,5 @@ public class Descarte {
                 baraja.poner(carta);
             }
         }
-    }
-
-    public void poner(Carta carta) {
-        cartas[ultima] = carta;
-        ultima++;
     }
 }

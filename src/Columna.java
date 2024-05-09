@@ -1,8 +1,6 @@
 
-public class Columna {
+public class Columna extends Mazo {
 
-    private Carta[] cartas;
-    private int ultima;
     private int posicion;
 
     public Columna(Baraja baraja, int numeroColumna) {
@@ -28,10 +26,6 @@ public class Columna {
             }
         }
         System.out.println();
-    }
-
-    private boolean vacia() {
-        return ultima == 0;
     }
 
     public void moverA(Palo palo) {
@@ -62,11 +56,6 @@ public class Columna {
         }
     }
 
-    private Carta sacar() {
-        ultima--;
-        return cartas[ultima];
-    }
-
     public void voltear() {
         if (this.vacia()) {
             System.out.println("No hay carta para voltear");
@@ -87,10 +76,5 @@ public class Columna {
                 !this.vacia() && this.cima().bocaArriba()
                         && this.cima().siguiente(carta) && this.cima().distintoColor(carta);
 
-    }
-
-    public void poner(Carta carta) {
-        cartas[ultima] = carta;
-        ultima++;
     }
 }

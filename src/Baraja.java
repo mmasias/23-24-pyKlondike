@@ -1,14 +1,11 @@
 import java.util.Random;
 
-public class Baraja {
-
-    private Carta[] cartas;
+public class Baraja extends Mazo {
 
     private final int PALOS = 4;
     private final int NUMEROS = 13;
     private final int TOTAL_CARTAS = PALOS * NUMEROS;
 
-    private int ultima;
 
     public Baraja() {
         ultima = 0;
@@ -30,11 +27,6 @@ public class Baraja {
             cartas[origen] = cartas[destino];
             cartas[destino] = carta;
         }
-    }
-
-    public void poner(Carta carta) {
-        cartas[ultima] = carta;
-        ultima++;
     }
 
     public void mostrar() {
@@ -65,14 +57,4 @@ public class Baraja {
             }
         }
     }
-
-    public Carta sacar() {
-        ultima--;
-        return cartas[ultima];
-    }
-
-    public boolean vacia() {
-        return ultima == 0;
-    }
-
 }
