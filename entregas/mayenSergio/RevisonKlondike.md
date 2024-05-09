@@ -20,7 +20,7 @@ Ya que fácilmente puede estar en la propia clase de Palo y Columna para que la 
 
 ## Clase Baraja
 
-La clase Baraja contiene un buen manejo y codigo legible sin comentarios ante esta clase.
+La clase Baraja contiene un buen manejo y código legible sin comentarios ante esta clase.
 
 ## Clase Carta
 
@@ -28,11 +28,11 @@ En general, la clase parece estar bien implementada y proporciona funcionalidade
 
 ## Clase Descarte
 
-En esta clase Descarte maneja bien sus clases, si bien es cierto lo que si pudiera implementar es el manejo de excepciones en el ámbito de mensajes para el usuario.
+En esta clase Descarte maneja bien sus métodos, si bien es cierto lo que si pudiera implementar es el manejo de excepciones en el ámbito de mensajes para el usuario.
 
 ## Clase Intervalo
 
-Esta clase está bien hecha y su mayor funcionalidad así como su clase lo especifíca da la puata del intervalo de como se muestran las cartas, recoger o desplazar una o otra acción.
+Esta clase está bien hecha y su mayor funcionalidad así como su clase lo especifíca y da la puata del intervalo de como se muestran las cartas, recoger o desplazar una o otra acción.
 
 Puntos a tomar en cuenta es la validación de entradas y manejo de excepciones llamese por intervalos que puedan ser incorrectos y también por número validos que el usuario haya ingresado.
 
@@ -42,4 +42,4 @@ La clase Menu no tengo mucho que aportar ya que cumple su funcionalidad principa
 
 ## Clase Palo
 
-Esta clase Palo no tengo mucho que aportar ya que maneja el juego de agrupar las cartas que están ubicadas en el palo y controlando su movimiento para agregarla sobre ella o no.
+Esta clase Palo agrupa las cartas que están ubicadas en el palo y controlando su movimiento para agregarla sobre ella o no, por mis conocimientos tiene un buen flujo y translado de responsabilidades con sus métodos y parámetros.
