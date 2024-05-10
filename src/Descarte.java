@@ -2,8 +2,7 @@
 public class Descarte extends Mazo {
 
     public Descarte() {
-        this.ultima = 0;
-        cartas = new Carta[52 - 28];
+        super(52-18);
     }
 
     public void mostrar() {

@@ -2,8 +2,7 @@
 public class Palo extends Mazo {
 
     public Palo() {
-        ultima = 0;
-        cartas = new Carta[13];
+        super(13);
     }
 
     public void mostrar() {

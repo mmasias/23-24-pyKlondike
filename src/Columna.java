@@ -3,10 +3,9 @@ public class Columna extends Mazo {
 
     private int posicion;
 
-    public Columna(Baraja baraja, int numeroColumna) {
+    public Columna(Baraja baraja, int numeroColumna) {        
+        super(19);
         this.posicion = numeroColumna;
-        ultima = 0;
-        cartas = new Carta[19];
         for (int i = 0; i < this.posicion; i++) {
             Carta carta = baraja.sacar();
             if (i == this.posicion - 1) {
