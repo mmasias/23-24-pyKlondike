@@ -1,10 +1,9 @@
 # Borrador del 21 (Blackjack)
 
-Corregido el bug por no recrear la baraja al iniciar de nuevo. (Discutible...)
 
 ```
 --------------------
-Mano: [9 ♥️][A ♠️] - Puntaje: 20 ==> Sigue jugando
+Mano: [9 ♥][4 ♣] - Puntaje: 13 ==> Sigue jugando
 --------------------
 1. Pedir
 2. Empezar de nuevo
@@ -12,12 +11,45 @@ Mano: [9 ♥️][A ♠️] - Puntaje: 20 ==> Sigue jugando
 --------------------
 1
 --------------------
-Mano: [9 ♥️][A ♠️][A ♦️] - Puntaje: 21 ==> Ganó
+Mano: [9 ♥][4 ♣][A ♦] - Puntaje: 14 ==> Sigue jugando
 --------------------
 1. Pedir
 2. Empezar de nuevo
 3. Salir
 --------------------
+1
+--------------------
+Mano: [9 ♥][4 ♣][A ♦][9 ♦] - Puntaje: 23 ==> Perdió
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+2
+--------------------
+Mano: [8 ♦][8 ♥] - Puntaje: 16 ==> Sigue jugando
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+1
+--------------------
+Mano: [8 ♦][8 ♥][Q ♥] - Puntaje: 26 ==> Perdió
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+2
+--------------------
+Mano: [J ♣][A ♣] - Puntaje: 21 ==> Ganó
+--------------------
+1. Pedir
+2. Empezar de nuevo
+3. Salir
+--------------------
+
 ```
 
 ## Clases propuestas y sus respectivas vistas públicas
