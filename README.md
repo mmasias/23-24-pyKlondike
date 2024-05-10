@@ -54,6 +54,10 @@ Mano: [J ♣][A ♣] - Puntaje: 21 ==> Ganó
 
 ## Clases propuestas y sus respectivas vistas públicas
 
+<details>
+
+<summary>Propuesta...</summary>
+
 - **XXI**
   - [x] XXI()
   - [x] void jugar()
@@ -63,3 +67,7 @@ Mano: [J ♣][A ♣] - Puntaje: 21 ==> Ganó
   - [x] void pedir(Baraja baraja)
   - [x] boolean haPerdido()
   - [x] boolean xxi()
+  
+</details>
+
+
