@@ -3,7 +3,6 @@ public class Mano {
 
     private Carta[] cartas;
     private int ultima;
-    private boolean abierta;
 
     public Mano(Baraja baraja) {
         ultima = 0;
@@ -13,7 +12,6 @@ public class Mano {
             carta.voltear();
             this.poner(carta);
         }
-        this.abierta = true;
     }
 
     private void poner(Carta carta) {
