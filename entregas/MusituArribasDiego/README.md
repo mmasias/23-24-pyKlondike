@@ -7,6 +7,7 @@ Palo deberia poder juntar: Trebol y picas/Corazones y Rombos UTilizaremos mejor 
     }
 
 Dentro del metodo moverA, la comprobación que se hace es posterior a quitar la carta de descarte. Si no se puede mover la volvemos a poner donde estaba.
+
     public void moverA(Palo palo) {
         if (this.vacia()) {
             System.out.println("No hay cartas en el descarte.");
