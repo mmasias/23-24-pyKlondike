@@ -24,40 +24,54 @@ public class RetoEDA {
         System.out.println("2. Ordenar por palo y luego por número");
         int opcion = scanner.nextInt();
 
-        Arrays.sort(cartas, 0, index, new Comparator<Carta>() {
-            @Override
-            public int compare(Carta c1, Carta c2) {
-                int palo1 = getOrdenPalo(c1);
-                int palo2 = getOrdenPalo(c2);
+        switch (opcion) {
+            case 1:
+            Arrays.sort(cartas, 0, index, new Comparator<Carta>() {
+                @Override
+                public int compare(Carta c1, Carta c2) {
+                    int palo1 = getOrdenPalo(c1);
+                    int palo2 = getOrdenPalo(c2);
 
-                if (palo1 != palo2) {
-                    return Integer.compare(palo1, palo2);
-                } else {
-                    return Integer.compare(getNumero(c2), getNumero(c1));
-                }
-            }
-
-            private int getOrdenPalo(Carta carta) {
-                if (carta.igualPalo(new Carta(2, 0))) {
-                    return 0;
-                } else if (carta.igualPalo(new Carta(1, 0))) {
-                    return 1;
-                } else if (carta.igualPalo(new Carta(0, 0))) {
-                    return 2;
-                } else {
-                    return 3;
-                }
-            }
-
-            private int getNumero(Carta carta) {
-                for (int i = 0; i < 13; i++) {
-                    if (carta.siguiente(new Carta(0, i))) {
-                        return i;
+                    if (palo1 != palo2) {
+                        return Integer.compare(palo1, palo2);
+                    } else {
+                        return Integer.compare(getNumero(c2), getNumero(c1));
                     }
                 }
-                return 12;
-            }
-        });
+
+                private int getOrdenPalo(Carta carta) {
+                    if (carta.igualPalo(new Carta(2, 0))) {
+                        return 0;
+                    } else if (carta.igualPalo(new Carta(1, 0))) {
+                        return 1;
+                    } else if (carta.igualPalo(new Carta(0, 0))) {
+                        return 2;
+                    } else {
+                        return 3;
+                    }
+                }
+
+                private int getNumero(Carta carta) {
+                    for (int i = 0; i < 13; i++) {
+                        if (carta.siguiente(new Carta(0, i))) {
+                            return i;
+                        }
+                    }
+                    return 12;
+                }
+            });
+            break;
+
+            case 2:
+
+            //
+            
+            break;
+
+            default:
+            System.out.println("Opcion no valida :( ");
+            break;
+        }
 
         for (int i = 0; i < index; i++) {
             cartas[i].voltear();
