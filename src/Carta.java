@@ -1,5 +1,4 @@
-
-public class Carta {
+class Carta {
 
     private int palo;
     private int numero;

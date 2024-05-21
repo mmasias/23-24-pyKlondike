@@ -1,31 +1,13 @@
-
-public class Palo {
-
-    private Carta[] cartas;
-    private int ultima;
+public class Palo extends Mazo {
 
     public Palo() {
-        ultima = 0;
-        cartas = new Carta[13];
+        super(13, "Palo");
     }
 
-    public void mostrar() {
-        System.out.print("Palo: ");
-        if (this.vacia()) {
-            System.out.println("No hay cartas en el palo");
-        } else {
-            Carta carta = this.cima();
-            carta.mostrar();
-            System.out.println();
-        }
-    }
-
-    private Carta cima() {
-        return cartas[ultima - 1];
-    }
-
-    private boolean vacia() {
-        return ultima==0;
+    @Override
+    protected void mostrarContenido() {
+        Carta carta = this.cima();
+        carta.mostrar();
     }
 
     public void moverA(Columna columna) {
@@ -42,19 +24,8 @@ public class Palo {
         }
     }
 
-    private Carta sacar() {
-        ultima--;
-        return cartas[ultima];
-    }
-
     public boolean apilable(Carta carta) {
         return this.vacia() && carta.esAs() ||
         !this.vacia() && carta.igualPalo(this.cima()) && carta.siguiente(this.cima());
     }
-
-    public void poner(Carta carta) {
-        cartas[ultima] = carta;
-        ultima++;
-    }
-
 }

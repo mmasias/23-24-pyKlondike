@@ -1,18 +1,13 @@
 import java.util.Random;
 
-public class Baraja {
+public class Baraja extends Mazo {
 
-    private Carta[] cartas;
-
-    private final int PALOS = 4;
-    private final int NUMEROS = 13;
-    private final int TOTAL_CARTAS = PALOS * NUMEROS;
-
-    private int ultima;
+    private static final int PALOS = 4;
+    private static final int NUMEROS = 13;
+    private static final int TOTAL_CARTAS = PALOS * NUMEROS;
 
     public Baraja() {
-        ultima = 0;
-        cartas = new Carta[TOTAL_CARTAS];
+        super(TOTAL_CARTAS, "Baraja");
         for (int palo = 0; palo < PALOS; palo++) {
             for (int numero = 0; numero < NUMEROS; numero++) {
                 this.poner(new Carta(palo, numero));
@@ -32,24 +27,10 @@ public class Baraja {
         }
     }
 
-    public void poner(Carta carta) {
-        cartas[ultima] = carta;
-        ultima++;
-    }
-
-    public void mostrar() {
-        System.out.print("BARAJA: ");
-        if (this.vacia()) {
-            System.out.println("No hay cartas en la baraja");
-        } else {
-            Carta carta = this.cima();
-            carta.mostrar();
-            System.out.println();
-        }
-    }
-
-    private Carta cima() {
-        return cartas[ultima - 1];
+    @Override
+    protected void mostrarContenido() {
+        Carta carta = this.cima();
+        carta.mostrar();
     }
 
     public void moverA(Descarte descarte) {
@@ -65,14 +46,4 @@ public class Baraja {
             }
         }
     }
-
-    public Carta sacar() {
-        ultima--;
-        return cartas[ultima];
-    }
-
-    public boolean vacia() {
-        return ultima == 0;
-    }
-
 }
