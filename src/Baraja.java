@@ -7,7 +7,7 @@ public class Baraja extends Mazo {
     private static final int TOTAL_CARTAS = PALOS * NUMEROS;
 
     public Baraja() {
-        super(TOTAL_CARTAS, "Baraja");
+        super(TOTAL_CARTAS);
         for (int palo = 0; palo < PALOS; palo++) {
             for (int numero = 0; numero < NUMEROS; numero++) {
                 this.poner(new Carta(palo, numero));
@@ -27,13 +27,11 @@ public class Baraja extends Mazo {
         }
     }
 
-    @Override
-    protected void mostrarContenido() {
-        Carta carta = this.cima();
-        carta.mostrar();
+    public void mostrar() {
+        super.mostrar("BARAJA: ", "No hay cartas en la baraja", 1);
     }
 
-    public void moverA(Descarte descarte) {
+    public void descartar(Descarte descarte) {
         if (this.vacia()) {
             System.out.println("¡No hay cartas en la baraja!");
         } else {
