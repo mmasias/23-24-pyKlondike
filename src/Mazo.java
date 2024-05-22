@@ -27,7 +27,7 @@ abstract class Mazo {
     }
 
     protected void mostrar(String titulo, String mensajeMazoVacio, int numeroCartas) {
-        System.out.print(": ");
+        System.out.print(titulo);
         if (this.vacia()) {
             System.out.println(mensajeMazoVacio);
         } else {
