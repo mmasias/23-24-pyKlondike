@@ -32,7 +32,7 @@ class Klondike {
             int opcion = menu.getOpcion();
             switch (opcion) {
                 case 1:
-                    baraja.moverA(descarte);
+                    baraja.descartar(descarte);
                     break;
                 case 2:
                     descarte.moverA(this.escogerPalo("A"));
