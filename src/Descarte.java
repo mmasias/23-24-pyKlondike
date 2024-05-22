@@ -1,18 +1,32 @@
-public class Descarte extends Mazo {
+
+public class Descarte {
+
+    private Carta[] cartas;
+    private int ultima;
 
     public Descarte() {
-        super(52 - 28, "Descarte");
+        this.ultima = 0;
+        cartas = new Carta[52 - 28];
     }
 
-    @Override
-    protected void mostrarContenido() {
-        int primeraVisible = ultima - 3;
-        if (primeraVisible < 0) {
-            primeraVisible = 0;
+    public void mostrar() {
+        System.out.print("Descarte: ");
+        if (this.vacia()) {
+            System.out.println("No hay cartas en el Descarte");
+        } else {
+            int primeraVisible = ultima - 3;
+            if (primeraVisible < 0) {
+                primeraVisible = 0;
+            }
+            for (int i = primeraVisible; i < ultima; i++) {
+                cartas[i].mostrar();
+            }
+            System.out.println();
         }
-        for (int i = primeraVisible; i < ultima; i++) {
-            cartas[i].mostrar();
-        }
+    }
+
+    private boolean vacia() {
+        return ultima == 0;
     }
 
     public void moverA(Palo palo) {
@@ -26,6 +40,11 @@ public class Descarte extends Mazo {
                 System.out.println("Jugada inválida.");
             }
         }
+    }
+
+    private Carta sacar() {
+        ultima--;
+        return cartas[ultima];
     }
 
     public void moverA(Columna columna) {
@@ -51,5 +70,10 @@ public class Descarte extends Mazo {
                 baraja.poner(carta);
             }
         }
+    }
+
+    public void poner(Carta carta) {
+        cartas[ultima] = carta;
+        ultima++;
     }
 }
