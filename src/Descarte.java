@@ -37,6 +37,7 @@ public class Descarte {
             if (palo.apilable(carta)) {
                 palo.poner(carta);
             } else {
+                poner(carta);
                 System.out.println("Jugada inválida.");
             }
         }
