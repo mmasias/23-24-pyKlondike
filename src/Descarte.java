@@ -55,6 +55,7 @@ public class Descarte {
             if (columna.apilable(carta)) {
                 columna.poner(carta);
             } else {
+                poner(carta);
                 System.out.println("No se puede");
             }
         }
