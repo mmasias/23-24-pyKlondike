@@ -1,4 +1,3 @@
-
 public class Columna {
 
     private Carta[] cartas;
@@ -6,21 +5,21 @@ public class Columna {
     private int posicion;
 
     public Columna(Baraja baraja, int numeroColumna) {
-        this.posicion = numeroColumna;
+        posicion = numeroColumna;
         ultima = 0;
         cartas = new Carta[19];
-        for (int i = 0; i < this.posicion; i++) {
+        for (int i = 0; i < posicion; i++) {
             Carta carta = baraja.sacar();
-            if (i == this.posicion - 1) {
+            if (i == posicion - 1) {
                 carta.voltear();
             }
-            this.poner(carta);
+            poner(carta);
         }
     }
 
     public void mostrar() {
-        System.out.print("Columna [" + this.posicion + "]: ");
-        if (this.vacia()) {
+        System.out.print("Columna [" + posicion + "]: ");
+        if (vacia()) {
             System.out.print("NADA");
         } else {
             for (int i = 0; i < ultima; i++) {
@@ -35,28 +34,28 @@ public class Columna {
     }
 
     public void moverA(Palo palo) {
-        if (this.vacia()) {
+        if (vacia()) {
             System.out.println("No se puede");
         } else {
-            Carta carta = this.sacar();
+            Carta carta = sacar();
             if (palo.apilable(carta)) {
                 palo.poner(carta);
             } else {
-                this.poner(carta);
+                poner(carta);
                 System.out.println("No se puede!");
             }
         }
     }
 
     public void moverA(Columna columna) {
-        if (this.vacia()) {
+        if (vacia()) {
             System.out.println("no se puede!");
         } else {
-            Carta carta = this.sacar();
+            Carta carta = sacar();
             if (columna.apilable(carta)) {
                 columna.poner(carta);
             } else {
-                this.poner(carta);
+                poner(carta);
                 System.out.println("No se puede!");
             }
         }
@@ -68,12 +67,12 @@ public class Columna {
     }
 
     public void voltear() {
-        if (this.vacia()) {
+        if (vacia()) {
             System.out.println("No hay carta para voltear");
-        } else if (this.cima().bocaArriba()) {
+        } else if (cima().bocaArriba()) {
             System.out.println("No hay carta boca abajo en la cima");
         } else {
-            this.cima().voltear();
+            cima().voltear();
         }
     }
 
@@ -83,10 +82,8 @@ public class Columna {
 
     public boolean apilable(Carta carta) {
 
-        return this.vacia() && carta.esRey() ||
-                !this.vacia() && this.cima().bocaArriba()
-                        && this.cima().siguiente(carta) && this.cima().distintoColor(carta);
-
+        return vacia() && carta.esRey() ||
+                !vacia() && cima().bocaArriba() && cima().siguiente(carta) && cima().distintoColor(carta);
     }
 
     public void poner(Carta carta) {
