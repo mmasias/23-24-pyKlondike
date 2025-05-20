@@ -1,23 +1,13 @@
-
 public class Palo extends Mazo {
 
     public Palo() {
-        super(13);
+        super(13, "Palo");
     }
 
-    public void mostrar() {
-        System.out.print("Palo: ");
-        if (this.vacia()) {
-            System.out.println("No hay cartas en el palo");
-        } else {
-            Carta carta = this.cima();
-            carta.mostrar();
-            System.out.println();
-        }
-    }
-
-    private Carta cima() {
-        return cartas[ultima - 1];
+    @Override
+    protected void mostrarContenido() {
+        Carta carta = this.cima();
+        carta.mostrar();
     }
 
     public void moverA(Columna columna) {

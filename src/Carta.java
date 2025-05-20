@@ -1,5 +1,4 @@
-
-public class Carta {
+class Carta {
 
     private int palo;
     private int numero;
@@ -24,7 +23,7 @@ public class Carta {
             numero = NUMEROS[this.numero];
             palo = PALOS[this.palo];
         }
-        System.out.print ("[" + numero + " " + palo + "]");
+        System.out.print ("[" + numero + " " + palo + " ]");
     }
 
     public void voltear() {

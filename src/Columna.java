@@ -1,10 +1,9 @@
-
 public class Columna extends Mazo {
 
     private int posicion;
 
-    public Columna(Baraja baraja, int numeroColumna) {        
-        super(19);
+    public Columna(Baraja baraja, int numeroColumna) {
+        super(19, "Columna");
         this.posicion = numeroColumna;
         for (int i = 0; i < this.posicion; i++) {
             Carta carta = baraja.sacar();
@@ -15,16 +14,11 @@ public class Columna extends Mazo {
         }
     }
 
-    public void mostrar() {
-        System.out.print("Columna [" + this.posicion + "]: ");
-        if (this.vacia()) {
-            System.out.print("NADA");
-        } else {
-            for (int i = 0; i < ultima; i++) {
-                cartas[i].mostrar();
-            }
+    @Override
+    protected void mostrarContenido() {
+        for (int i = 0; i < ultima; i++) {
+            cartas[i].mostrar();
         }
-        System.out.println();
     }
 
     public void moverA(Palo palo) {
@@ -63,10 +57,6 @@ public class Columna extends Mazo {
         } else {
             this.cima().voltear();
         }
-    }
-
-    private Carta cima() {
-        return cartas[ultima - 1];
     }
 
     public boolean apilable(Carta carta) {

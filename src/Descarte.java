@@ -1,23 +1,17 @@
-
 public class Descarte extends Mazo {
 
     public Descarte() {
-        super(52-18);
+        super(52 - 28, "Descarte");
     }
 
-    public void mostrar() {
-        System.out.print("Descarte: ");
-        if (this.vacia()) {
-            System.out.println("No hay cartas en el Descarte");
-        } else {
-            int primeraVisible = ultima - 3;
-            if (primeraVisible < 0) {
-                primeraVisible = 0;
-            }
-            for (int i = primeraVisible; i < ultima; i++) {
-                cartas[i].mostrar();
-            }
-            System.out.println();
+    @Override
+    protected void mostrarContenido() {
+        int primeraVisible = ultima - 3;
+        if (primeraVisible < 0) {
+            primeraVisible = 0;
+        }
+        for (int i = primeraVisible; i < ultima; i++) {
+            cartas[i].mostrar();
         }
     }
 
